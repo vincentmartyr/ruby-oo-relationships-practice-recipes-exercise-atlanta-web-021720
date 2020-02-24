@@ -1,20 +1,21 @@
 class Recipe
-attr_accessor
+attr_accessor :name
 attr_writer
 attr_reader
 
 @@all = []
 
-def initialize
-
+def initialize(name)
+    @name = name
     @@all << self
 end
 
 def self.most_popular
-
+  
 end
 
 def users
+
 end
 
 def ingredients
@@ -24,7 +25,7 @@ def allergens
 end
 
 def add_ingredients(ingredients)
-    
+
 end
 
 
