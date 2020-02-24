@@ -11,14 +11,23 @@ def initialize(name)
 end
 
 def self.most_popular
-  
+counter = {}
+ RecipeCard.all.each do |recipecard| 
+    counter[recipecard.recipe] ||= 0
+    counter[recipecard.recipe] += 1
+end
+ mp = counter.max_by{|key, value| value}
+ mp[0]
 end
 
-def users
+def users 
+recipe_array = RecipeCard.all.select {|recipecard| recipecard.recipe == self}
+recipe_array.collect{|recipecard| recipecard.user}
 
 end
 
 def ingredients
+    
 end
 
 def allergens

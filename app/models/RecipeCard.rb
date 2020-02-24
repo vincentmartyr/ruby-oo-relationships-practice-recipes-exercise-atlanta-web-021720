@@ -15,12 +15,6 @@ class RecipeCard
     end 
 
     
-        
-    
-
-    
-
-
     def self.all
         @@all
     end
